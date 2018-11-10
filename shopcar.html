@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>购物车</title>
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/carts.css">
+</head>
+<body>
+<section class="cartMain">
+  <div class="cart-thead"> 
+    <!-- 我的冰箱 -->
+    <div id="fridge-a" style="display:none"> <a class="fridge-guide" href="" ><i></i></a> </div>
+    <div class="column t-checkbox">
+      <div class="cart-checkbox"> 
+        <!--所有商品全选-->
+        <input class="whole_check" id="all" type="checkbox">
+        <label for="all"></label>
+        全选 </div>
+    </div>
+    <div class="column t-goods">商品</div>
+    <div class="column t-props"></div>
+    <div class="column t-price">单价</div>
+    <div class="column t-quantity">数量</div>
+    <div class="column t-sum">小计</div>
+    <div class="column t-action">操作</div>
+  </div>
+  <div class="cartBox">
+    <div class="shop_info" style="display: none">
+      <div class="all_check"> 
+        <!--店铺全选-->
+        <input type="checkbox" id="shop_a" class="shopChoice">
+        <label for="shop_a" class="shop"></label>
+      </div>
+      <div class="shop_name"> 店铺：<a href="javascript:;">xxxxxxxxxxxxx</a> </div>
+    </div>
+    <div class="order_content" >
+      <ul class="order_lists" style="display: none">
+        <li class="list_chk">
+          <input type="checkbox" id="checkbox_2" class="son_check">
+          <label for="checkbox_2"></label>
+        </li>
+        <li class="list_con">
+          <div class="list_text"><a href="javascript:;">xxxxxxxxxxxxxxxxxxxx</a></div>
+        </li>
+        <li class="list_info">
+          <p>规格：默认</p>
+          <p>尺寸：16*16*3(cm)</p>
+        </li>
+        <li class="list_price">
+          <p class="price">￥30</p>
+        </li>
+        <li class="list_amount">
+          <div class="amount_box"> <a href="javascript:;" class="reduce reSty">-</a>
+            <input type="text" value="1" class="sum">
+            <a href="javascript:;" class="plus">+</a> </div>
+        </li>
+        <li class="list_sum">
+          <p class="sum_price">￥30</p>
+        </li>
+        <li class="list_op">
+          <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+        </li>
+      </ul>
+      <ul class="order_lists" style="display: none">
+        <li class="list_chk">
+          <input type="checkbox" id="checkbox_3" class="son_check">
+          <label for="checkbox_3"></label>
+        </li>
+        <li class="list_con">
+          <div class="list_text"><a href="javascript:;">xxxxxxxxxxxxxxxxxxxxxxxxx</a></div>
+        </li>
+        <li class="list_info">
+          <p>规格：默认</p>
+          <p>尺寸：16*16*3(cm)</p>
+        </li>
+        <li class="list_price">
+          <p class="price">￥30</p>
+        </li>
+        <li class="list_amount">
+          <div class="amount_box"> <a href="javascript:;" class="reduce reSty">-</a>
+            <input type="text" value="1" class="sum">
+            <a href="javascript:;" class="plus">+</a> </div>
+        </li>
+        <li class="list_sum">
+          <p class="sum_price">￥30</p>
+        </li>
+        <li class="list_op">
+          <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+        </li>
+      </ul>
+      <ul class="order_lists" style="display: none">
+        <li class="list_chk">
+          <input type="checkbox" id="checkbox_6" class="son_check">
+          <label for="checkbox_6"></label>
+        </li>
+        <li class="list_con">
+          <div class="list_text"><a href="javascript:;">xxxxxxxxxxxxxxxxxx</a></div>
+        </li>
+        <li class="list_info">
+          <p>规格：默认</p>
+          <p>尺寸：16*16*3(cm)</p>
+        </li>
+        <li class="list_price">
+          <p class="price">￥30</p>
+        </li>
+        <li class="list_amount">
+          <div class="amount_box"> <a href="javascript:;" class="reduce reSty">-</a>
+            <input type="text" value="1" class="sum">
+            <a href="javascript:;" class="plus">+</a> </div>
+        </li>
+        <li class="list_sum">
+          <p class="sum_price">￥30</p>
+        </li>
+        <li class="list_op">
+          <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="cartBox">
+    <div class="shop_info" style="display: none">
+      <div class="all_check"> 
+        <!--店铺全选-->
+        <input type="checkbox" id="shop_b" class="shopChoice">
+        <label for="shop_b" class="shop"></label>
+      </div>
+      <div class="shop_name"> 店铺：<a href="javascript:;">xxxxxxxxxxx</a> </div>
+    </div>
+    <div class="order_content">
+      <ul class="order_lists" style="display: none">
+        <li class="list_chk">
+          <input type="checkbox" id="checkbox_4" class="son_check">
+          <label for="checkbox_4"></label>
+        </li>
+        <li class="list_con">
+          <div class="list_text"><a href="javascript:;">xxxxxxxxxxxxxxxx</a></div>
+        </li>
+        <li class="list_info">
+          <p>规格：默认</p>
+          <p>尺寸：16*16*3(cm)</p>
+        </li>
+        <li class="list_price">
+          <p class="price">￥30</p>
+        </li>
+        <li class="list_amount">
+          <div class="amount_box"> <a href="javascript:;" class="reduce reSty">-</a>
+            <input type="text" value="1" class="sum">
+            <a href="javascript:;" class="plus">+</a> </div>
+        </li>
+        <li class="list_sum">
+          <p class="sum_price">￥30</p>
+        </li>
+        <li class="list_op">
+          <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+        </li>
+      </ul>
+      <ul class="order_lists" style="display: none">
+        <li class="list_chk">
+          <input type="checkbox" id="checkbox_5" class="son_check">
+          <label for="checkbox_5"></label>
+        </li>
+        <li class="list_con">
+          <div class="list_text"><a href="javascript:;">xxxxxxxxxxxxxxxxxxxxxx</a></div>
+        </li>
+        <li class="list_info">
+          <p>规格：默认</p>
+          <p>尺寸：16*16*3(cm)</p>
+        </li>
+        <li class="list_price">
+          <p class="price">￥30</p>
+        </li>
+        <li class="list_amount">
+          <div class="amount_box"> <a href="javascript:;" class="reduce reSty">-</a>
+            <input type="text" value="1" class="sum">
+            <a href="javascript:;" class="plus">+</a> </div>
+        </li>
+        <li class="list_sum">
+          <p class="sum_price">￥30</p>
+        </li>
+        <li class="list_op">
+          <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="cartBox">
+    <div class="shop_info" style="display: none">
+      <div class="all_check"> 
+        <!--店铺全选-->
+        <input type="checkbox" id="shop_c" class="shopChoice">
+        <label for="shop_c" class="shop"></label>
+      </div>
+      <div class="shop_name"> 店铺：<a href="javascript:;">卷卷旗舰店</a> </div>
+    </div>
+    <div class="order_content">
+      <ul class="order_lists" style="display: none">
+        <li class="list_chk">
+          <input type="checkbox" id="checkbox_8" class="son_check">
+          <label for="checkbox_8"></label>
+        </li>
+        <li class="list_con">
+          <div class="list_text"><a href="javascript:;">xxxxxxxxxxxxxxxxxxxxx</a></div>
+        </li>
+        <li class="list_info">
+          <p>规格：默认</p>
+          <p>尺寸：16*16*3(cm)</p>
+        </li>
+        <li class="list_price">
+          <p class="price">￥30</p>
+        </li>
+        <li class="list_amount">
+          <div class="amount_box"> <a href="javascript:;" class="reduce reSty">-</a>
+            <input type="text" value="1" class="sum">
+            <a href="javascript:;" class="plus">+</a> </div>
+        </li>
+        <li class="list_sum">
+          <p class="sum_price">￥30</p>
+        </li>
+        <li class="list_op">
+          <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+        </li>
+      </ul>
+      <ul class="order_lists" style="display: none">
+        <li class="list_chk">
+          <input type="checkbox" id="checkbox_9" class="son_check">
+          <label for="checkbox_9"></label>
+        </li>
+        <li class="list_con">
+          <div class="list_text"><a href="javascript:;">xxxxxxxxxxxxxxxxxxxx</a></div>
+        </li>
+        <li class="list_info">
+          <p>规格：默认</p>
+          <p>尺寸：16*16*3(cm)</p>
+        </li>
+        <li class="list_price">
+          <p class="price">￥30</p>
+        </li>
+        <li class="list_amount">
+          <div class="amount_box"> <a href="javascript:;" class="reduce reSty">-</a>
+            <input type="text" value="1" class="sum">
+            <a href="javascript:;" class="plus">+</a> </div>
+        </li>
+        <li class="list_sum">
+          <p class="sum_price">￥30</p>
+        </li>
+        <li class="list_op">
+          <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+	<footer>
+		<div class="wide">
+			<div class="mid">
+				<div class="nav">
+					<dl>
+						<dt>会员</dt>
+						<dd><a href="#" title="更改用户信息"><font style="vertical-align: inherit">更改帐户信息</font></a></dd>
+						<dd><a href="#" title="更改用户信息"><font style="vertical-align: inherit">愿望清单</font></a></dd>
+						<dd><a href="#" title="更改用户信息"><font style="vertical-align: inherit">订单跟踪</font></a></dd>
+						<dd><a href="#" title="更改用户信息"><font style="vertical-align: inherit">联系我们</font></a></dd>
+					</dl>
+					<dl>
+						<dt>产品和订单</dt>
+						<dd><a href="#" title="更改用户信息"><font style="vertical-align: inherit">如何下订单</font></a></dd>
+						<dd><a href="#" title="更改用户信息"><font style="vertical-align: inherit">产品咨询</font></a></dd>
+						<dd><a href="#" title="更改用户信息"><font style="vertical-align: inherit">产品审核</font></a></dd>
+					</dl>
+					<dl>
+						<dt>付款</dt>
+						<dd><a href="#" title="更改用户信息"><font style="vertical-align: inherit">退货政策</font></a></dd>
+						<dd><a href="#" title="更改用户信息"><font style="vertical-align: inherit">退货方法</font></a></dd>
+						<dd><a href="#" title="更改用户信息"><font style="vertical-align: inherit">退款</font></a></dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div class="wide">
+        <div class="bot">
+        	<div class="copyright"> &nbsp;&nbsp;&nbsp;&nbsp; <a href="#" target="_blank">FINE</a></div>
+            <div class="clear"></div>
+        </div>
+    </div>
+	</footer>
+  <!--底部-->
+  <div class="bar-wrapper">
+    <div class="bar-right">
+      <div class="piece">已选商品<strong class="piece_num">0</strong>件</div>
+      <div class="totalMoney">共计: <strong class="total_text">0.00</strong></div>
+      <div class="calBtn"><a href="javascript:;">结算</a></div>
+    </div>
+  </div>
+</section>
+<section class="model_bg"></section>
+<section class="my_model">
+  <p class="title">删除宝贝<span class="closeModel">X</span></p>
+  <p>您确认要删除该宝贝吗？</p>
+  <div class="opBtn"><a href="javascript:;" class="dialog-sure">确定</a><a href="javascript:;" class="dialog-close">关闭</a></div>
+</section>
+<script src="./js/jquery.min(1).js"></script> 
+<script src="./js/carts.js"></script>
+</body>
+</html>

@@ -1,0 +1,618 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-size: 100%;
+	font-family: 'Lato', sans-serif;
+	
+}
+.fr {
+    float: right;
+}
+
+.fl {
+    float: left;
+}
+
+
+
+body{
+	max-width: 1000px;
+	margin: 0px auto;
+	background-color: white;
+}
+
+header,#section1{
+	background-color: #fff;
+}
+
+
+#container{
+	margin: 0px auto;
+	width: 75%;
+}
+
+#head_left{
+	float: left;
+	
+}
+
+#head_left  a img{
+	height: 100px;
+}
+
+
+#head_center{
+	float: left;
+	margin-left: 30px;
+	margin-top: 20px;
+	width: 50%
+}
+
+#searchBar input{
+	float: left;
+}
+
+#bar{
+	height: 44px;
+	width: 75%;
+	line-height: 38px;
+	border: 1px solid #cbcbcb;
+	background: none;
+	outline: none;
+	text-indent: 10px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+#search{
+	background-image:url(../sourse/search.png);
+	background-color: chocolate;
+	background-repeat: no-repeat;/*背景小图标不重复*/
+	background-position: center center;
+	padding: 15px 10px 10px 40px;/*设置input内边距*/
+	/*设置input样式好看*/
+	border-bottom-right-radius: 3px;
+	border-top-right-radius: 3px;
+	border:1px solid #ddd;
+	height: 48px;
+	width: 48px;
+}
+
+#head_right ul li{
+	list-style: none;
+	display: inline-block;
+	
+}
+
+
+
+#head_right{
+	float: right;
+	display: block;
+	margin-top: 30px;
+	
+}
+
+.icon{
+    float: left;
+    margin: 0 10px;
+	
+}
+
+#head_right .header_cart {
+    width: 50px;
+    height: 40px;
+    line-height: 20px;
+    padding-left: 42px;
+    background: url(../sourse/icon_cart.png) left center no-repeat;
+    position: relative;
+    display: block;
+	color: #333;
+}
+
+ #head_right .header_cart .cart_txt {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 300;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: normal;
+}
+
+ #head_right  .cart_count {
+    min-width: 16px;
+    height: 16px;
+    line-height: 16px;
+    padding: 0 5px;
+    display: block;
+    position: absolute;
+    left: 43px;
+    top: 2px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.FontBgColor {
+    background-color:coral;
+}
+
+#head_right  .SignInButton_sec {
+    padding-left: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: url(../sourse/icon_user.png) left center no-repeat;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+#head_right .SignInButton_sec a {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+ .search_form {
+    position: relative;
+    height: 40px;
+    margin-top: 34px;
+    padding-right: 49px;
+    margin-right: 35px;
+}
+
+.ajax_search {
+    position: relative;
+    z-index: 1002;
+	
+}
+
+
+
+ .search_form .text {
+    width: 250px;
+    height: 38px;
+    line-height: 38px;
+    border: 0;
+    border: 1px solid #cbcbcb;
+    background: none;
+    outline: none;
+    text-indent: 10px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+ .search_form .button {
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-image: url("../sourse/search.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+a{
+	color:#F4F7F7;
+	text-decoration: none;
+}
+
+ img{
+	width: 100%;
+	height: 100%;
+}
+
+.navBar{
+	clear: left;
+	background-color:rgb(39,40,56);
+	height: 40px;
+	border-radius: 5px;
+}
+
+.content{
+	margin: 0px auto;
+	width: 50%;
+	
+	
+}
+
+.content ul li{
+	float: left;
+	list-style: none;
+	text-decoration:none;
+	
+}
+
+.content ul li a{
+	display:block;
+	text-align:center; 
+	height:40px; 
+	line-height:30px;
+	width:100px;
+	margin-left: 30px;
+}
+
+.content ul li a:hover{
+	 background-color:#F60;
+	 color:#fff
+}
+
+
+
+@media ( max-width : 1000px ){
+}
+
+/* ======== 幻灯片样式 ======== */
+.slider-box {
+  position: absolute;
+/*  z-index: 1;*/
+/*  left: 0;*/
+  top: 50;
+  overflow: hidden;
+  
+  
+}
+
+.slider {
+/*  position: absolute;*/
+  left: 0;
+  top: 0;
+}
+.slider-item {
+  float: left;
+  cursor: default;
+}
+
+.slider-box .btn-box {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 0;
+}
+.slider-box .btn-item {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 12px;
+  border-radius: 50%;
+  background-color: #666;
+}
+.slider-box .btn-item__cur {
+  width: 12px;
+  height: 12px;
+  margin-bottom: -2px;
+  border: 1px solid #666;
+  background-color: transparent;
+}
+
+
+.btn, .slider-title, .btn-box {
+  z-index: 999;
+}
+
+/*模块1*/
+#section1{
+	margin-top:600px;
+	color: chocolate;
+	padding-top: 10px;
+	border-bottom: 1px solid #f4f4f4;
+}
+
+#section1_head{
+	text-align: center;
+	
+	
+}
+
+#section1_head h1{
+	font-size: 20px;
+	
+}
+
+.new ul li{
+	display: inline-block;
+	text-decoration: none;
+	
+}
+
+
+/*商品块*/
+.sale .item:hover{
+	border: 1px solid #ff5000;
+	z-index: 1;
+}
+
+.sale .item{
+	padding: 20px;
+	border: 1px solid #f4f4f4;
+	width: 200px;
+	margin: 10px 2px 0 2px;
+}
+.image img{
+	width: 197px;
+	height: 197px;
+}
+
+.line-1{
+	color: #666;
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+	margin: 8px 0;
+	font-size: 14px;
+}
+
+button.single-item {
+    color: #fff;
+    font-size: 16px;
+    padding: 3px 14px;
+    text-decoration: none;
+	margin-left: 50px;
+	border: none;
+}
+
+button.single-item:hover{
+	opacity: 0.7;
+}
+
+.hvr-outline-out {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px);
+    box-shadow: 0px 0px 1px rgba(0,0,0,0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    background: #FDA30E;
+}
+/*部分2*/
+.wide {
+    width: 1000px;
+    min-width: 1000px;
+	margin: 0px auto;
+	padding-top: 30px;
+}
+
+ .inmt .inmtl {
+    width: 300px;
+	 overflow: hidden;
+}
+
+.inmtl{
+	height: 1000px;
+}
+
+.inmtl img{
+	height: 900px;
+}
+
+ .inmt .inmtr {
+    width: 650px;
+}
+
+.inpro .protit {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.inpro .category {
+    text-align: center;
+    margin-top: 8px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 0px;
+    overflow: hidden;
+	
+}
+
+.category a{
+	color: #333;
+}
+
+.inpro .category a.cur {
+    color: #fff;
+}
+
+.inpro .category a {
+    display: inline-block;
+    padding: 0 20px;
+    margin: 0 2px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 32px;
+    border-radius: 16px;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.top_title {
+    font-size: 30px;
+    font-weight: bold;
+    height: 47px;
+    line-height: 47px;
+}
+
+.clear {
+    margin: 0px auto;
+    clear: both;
+    height: 0px;
+    font-size: 0px;
+    overflow: hidden;
+}
+
+.inpro .box {
+    display: none;
+    padding-top: 45px;
+}
+
+.inpro .inmtr .prod_box.first {
+    margin-left: 0px;
+}
+
+.inpro .prod_box {
+    width: 300px;
+    margin-left: 38px;
+    margin-bottom: 0px;
+	float: left;
+	
+}
+
+.prod_box{
+    min-height: 380px;
+	position: relative;
+}
+
+.prod_box3{
+	margin-left: 0px;
+	width: 262px;
+    margin-bottom: 0px;
+	float: left;
+	min-height: 380px;
+	position: relative;
+	overflow: hidden;
+}
+
+.inpro .prod_box3 .img {
+    height: 262px;
+	overflow: hidden;
+	position: relative;
+	
+}
+
+.inpro .prod_box .img {
+    height: 262px;
+	overflow: hidden;
+	position: relative;
+	
+}
+
+.v_m {
+    text-align: center;
+}
+
+.v_m img {
+    vertical-align: middle;
+}
+
+ .name {
+    display: block;
+    height: 28px;
+    overflow: hidden;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    line-height: 28px;
+/*    overflow: hidden;*/
+    text-align: center;
+    margin: 20px 5px 5px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.FontColor, a.FontColor, a.FontColor:hover{
+    color: #4ccc76;
+}
+
+.brief {
+    line-height: 20px;
+    max-height: 40px;
+    overflow: hidden;
+    font-weight: 300;
+    color: #333;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.PriceColor {
+    color: #4ccc76;
+}
+
+ .inpro .prod_box {
+    width: 262px;
+    margin-left: 38px;
+    margin-bottom: 0px;
+	 float: left;
+	 position: relative;
+/*	 min-height: 380px;*/
+}
+
+/*底部*/
+footer{
+	background: #f4f4f4;
+	padding-top: 50px;
+	min-width: 980px;
+	
+}
+
+footer .mid .nav dt {
+    font-size: 16px;
+    color: #333;
+    height: 32px;
+    line-height: 32px;
+    overflow: hidden;
+    margin-bottom: 13px;
+    padding-left: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+footer .mid .nav dl dd a{
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    padding-left: 15px;
+    color: #888;
+    font-size: 14px;
+}
+
+footer .mid .nav dl {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+	margin: 0px 120px;
+}
+
+footer .mid {
+    padding: 0px 0 65px;
+}
+
+
+.copyright a{
+	color: #333;
+	font-size: 14px;
+}
+
+footer .bot {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    line-height: 28px;
+    text-align: center;
+	border-top: 1px solid #dbdbdb;
+}

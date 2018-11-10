@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<!--<meta http-equiv="Pragma" content="no-cache">--> 
+<!--<meta http-equiv="Cache-Control" content="no-cache">--> 
+<!--<meta http-equiv="Expires" content="0">--> 
+<title>后台登录</title> 
+<link href="css/login.css" type="text/css" rel="stylesheet"> 
+<script>
+	function save(){
+		 username=document.getElementById("username").value;
+		 localStorage.setItem("username",username);
+	}
+</script>
+</head> 
+<body> 
+
+<div class="login">
+    <div class="message">
+      <div align="center"> Fine</div>
+    </div>
+    <div id="darkbannerwrap"></div>
+    
+ <!--   <form >-->
+		<input name="action" value="login" type="hidden">
+		<input id="username" placeholder="用户名" required type="text">
+		<hr class="hr15">
+		<input name="password" placeholder="密码" required type="password">
+		<hr class="hr15">
+		<a href="index.html"><button value="登录" id="login" style="width:100%;"  onClick="save()" >登陆</button></a>
+		<hr class="hr20">
+		<!-- 帮助 <a onClick="alert('请联系管理员')">忘记密码</a> -->
+	<!--</form>-->
+
+	
+</div>
+</body>
+</html>

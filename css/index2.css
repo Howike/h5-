@@ -1,0 +1,47 @@
+/* ======== 幻灯片样式 ======== */
+.slider-box {
+	position: absolute;
+	z-index: 1;
+	left: 112px;
+	top: 119px;
+	overflow: hidden;
+}
+
+.slider {
+	position: absolute;
+	left: -1008px;
+	top: 4px;
+}
+.slider-item {
+  float: left;
+  cursor: default;
+}
+
+.slider-box .btn-box {
+	position: absolute;
+	bottom: 1px;
+	width: 1008px;
+	text-align: center;
+	font-size: 0;
+	left: 39px;
+}
+.slider-box .btn-item {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 12px;
+  border-radius: 50%;
+  background-color: #666;
+}
+.slider-box .btn-item__cur {
+  width: 12px;
+  height: 12px;
+  margin-bottom: -2px;
+  border: 1px solid #666;
+  background-color: transparent;
+}
+
+
+.btn, .slider-title, .btn-box {
+  z-index: 999;
+}

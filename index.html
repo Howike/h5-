@@ -1,0 +1,485 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>fine</title>
+<link href="css/style.css" type="text/css" rel="stylesheet">
+<script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+<script src="js/style.js" type="text/javascript"></script>
+<script src="js/navChange.js"></script>
+<script src="js/slider.js"></script>
+<script type="text/javascript">
+
+	
+//购物车数字	
+var num=0;
+
+function addNum(){
+	num++;
+	showNum();
+}
+
+function showNum(){
+	document.getElementById("num").innerHTML=num;
+}
+//	window.addEventListener("load",t,true)
+	</script>
+	</head>
+	
+<body>n
+<header>
+  <div id="container">
+	<div id="head_left">
+		<a href="index.html">
+		  <img src="sourse/logo.png" alt="logo">
+	  	</a>
+	</div>
+	<div class="search_form ajax_search fl">
+       <form class="form" action="/search/" method="get">
+           <input name="Keyword" class="text fl" type="text" placeholder="" value="" autocomplete="off" notnull="">
+           <input class="button fr FontBgColor" type="submit" value="">
+           <div class="clear"></div>
+        </form>
+    </div>
+<div id="head_right">
+		<ul>
+			<li class="icon">
+				<a class="header_cart cart_inner"  href="shopcar.html">
+                	<span class="cart_txt">
+						<span class="cart_count FontBgColor" id="num" >0</span>
+					</span>
+                  	<span class="cart_txt">购物车</span>
+				</a>
+			</li>
+			<li class="icon">
+				<div class="global_login_sec" style="display: block;">
+					<div class="SignInButton_sec">
+                		<a class="SignInButton" href="login.html">登陆/注册</a>
+                		<a class="SignInButton" style="display: none" href="#" onClick="exit();">退出</a>
+           			</div>
+				</div>
+			</li>
+		</ul>
+	 </div>
+  </div>
+</header>
+<div class="navBar">
+	<div class="content">
+		<ul>
+			<li><a href="#">首页</a></li>
+			<li><a href="美食外卖.html">熟食</a></li>
+			<li><a href="饮品(今日推荐).html">饮料</a></li>
+		</ul>
+	</div>
+<!--
+	<div class="shopCar">
+		<div class="carBox">
+			<a href="checkout.html">
+				<h3>
+					<div class="total">
+						<i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>
+						<span class="simpleCart_total" id="simpleCart_total">0</span>元 (<span class="simpleCart_quantity" id="simpleCart_quantity">0</span>件 商品)
+					</div>				
+				</h3>
+			</a>
+			<p><a class="simpleCart_empty" href="javascript:;">购物车</a></p>	
+		</div>
+	</div>
+-->
+</div>
+<div class="slider-box" id="sliderBox" >
+	<div class="slider">
+		<a class="slider-item"  href="javascript:;"><img src="sourse/宣传1.jpg"></a>
+		<a class="slider-item"   href="javascript:;"><img src="sourse/宣传2.jpg"></a>
+		<a class="slider-item"   href="javascript:;"><img src="sourse/宣传3.jpg"></a>
+		<a class="slider-item"   href="javascript:;"><img src="sourse/宣传4.jpg"></a>
+	</div>
+	<div class="btn-box">
+		<a class="btn-item" href="javascript:;"></a>
+		<a class="btn-item btn-item__cur" href="javascript:;"></a>
+		<a class="btn-item" href="javascript:;"></a>
+		<a class="btn-item" href="javascript:;"></a>
+	</div>
+</div>
+<div id="section1">
+	<div id="section1_head">
+		<h1>
+			
+			----新品上架----
+			
+		</h1>
+	</div>
+	<div class="new">
+		<ul class="sale">
+			<li class="item item_01">
+				<a href="#" class="image">
+					<img src="sourse/商品1.jpg">
+				</a>
+				<a href="#" class="line-1" id="line1">
+					丽芝士NABATI纳宝帝奶酪威化饼干
+				</a>
+				<div class="price">
+					<span>¥</span>
+					<em id="prnum1">30</em>
+				</div>
+				<button class="item_add single-item hvr-outline-out button2" id="item1" onclick="save1(),addNum()">添加购物车</button>
+			</li>
+			<li class="item item_02">
+				<a href="#" class="image">
+					<img src="sourse/商品3.jpg">
+				</a>
+				<a href="#" class="line-1" id="line2">
+					雀巢速溶咖啡1 + 2原味
+				</a>
+				<div class="price">
+					<span>¥</span>
+					<em id="prnum2">30</em>
+				</div>
+				<button class="item_add single-item hvr-outline-out" id="item2" onClick="save2(),addNum()">添加购物车</button>
+			</li>
+			<li class="item item_03">
+				<a href="#" class="image">
+					<img src="sourse/商品2.jpg">
+				</a>
+				<a href="#" class="line-1" id="line3">
+					维他奶 原味豆奶250ML
+				</a>
+				<div class="price">
+					<span>¥</span>
+					<em id="prnum3">30</em>
+				</div>
+				<button class="item_add single-item hvr-outline-out button2" id="item3" onClick="save3(),addNum()">添加购物车</button>
+			</li>
+			<li class="item item_04">
+				<a href="#" class="image">
+					<img src="sourse/商品4.jpg">
+				</a>
+				<a href="#" class="line-1" id="line4">
+					统一生活面汤达人日式豚骨拉面
+				</a>
+				<div class="price">
+					<span>¥</span>
+					<em id="prnum4">30</em>
+				</div>
+				<button class="item_add single-item hvr-outline-out button2" id="item4" onClick="save4(),addNum()">添加购物车</button>
+			</li>
+			<li class="item item_05">
+				<a href="#" class="image">
+					<img src="sourse/商品7.jpg">
+				</a>
+				<a href="#" class="line-1" id="line5">
+					三只松鼠甘栗仁100G
+				</a>
+				<div class="price">
+					<span>¥</span>
+					<em id="prnum5">30</em>
+				</div>
+				<button class="item_add single-item hvr-outline-out button2" id="item5" onClick="save5(),addNum()">添加购物车</button>
+			</li>
+			<li class="item item_06">
+				<a href="#" class="image">
+					<img src="sourse/商品8.jpg">
+				</a>
+				<a href="#" class="line-1" id="line6">
+					锦元/甘源原味青豆青豌豆285G
+				</a>
+				<div class="price">
+					<span>¥</span>
+					<em id="prnum6">30</em>
+				</div>
+				<button class="item_add single-item hvr-outline-out button2" id="item6" onClick="save6(),addNum()">添加购物车</button>
+			</li>
+			<li class="item item_07">
+				<a href="#" class="image">
+					<img src="sourse/商品6.jpg">
+				</a>
+				<a href="#" class="line-1" id="line7">
+					三只松鼠手剥巴旦木235G
+				</a>
+				<div class="price">
+					<span>¥</span>
+					<em id="prnum7">30</em>
+				</div>
+				<button class="item_add single-item hvr-outline-out button2" id="item7" onClick="save7(),addNum()">添加购物车</button>
+			</li>
+			<li class="item item_08">
+				<a href="#" class="image">
+					<img src="sourse/商品5.jpg">
+				</a>
+				<a href="#" class="line-1" id="line8">
+					洽洽瓜子香瓜子308克
+				</a>
+				<div class="price">
+					<span>¥</span>
+					<em id="prnum8">30</em>
+				</div>
+				<button class="item_add single-item hvr-outline-out button2" id="item8" onClick="save8(),addNum()">添加购物车</button>
+			</li>
+		</ul>
+	</div>
+</div>
+<div id="section2">
+	<div class="inmt inpro wide">
+    <div class="inmtl fl">
+        <div><img alt="" src="sourse/宣传1.jpeg"></div>    
+	</div>
+	<div class="inmtr fr">
+        <div class="protit">    
+            <div class="category fr">
+                <a title="all" id="cat1" class="cur FontBgColor" href="javascript:void(0);" onClick="cat1()">全部</a>
+                <a title="cooked" id="cat2" class="" href="javascript:void(0);" onClick="cat2()">熟食</a>
+                <a title="sock" id="cat3" class="" href="javascript:void(0);" onClick="cat3()">零食</a>
+             </div>
+            <div class="top_title">最热商品</div>
+            <div class="clear"></div>
+        </div>
+                    <div class="box" style="display:block;">
+                    	<div class="prod_box first">
+                    	<div class="img v_m">
+                            <a class="pic_box" href="#">
+								<img alt="sound intone" src="sourse/商品1.jpg"><span></span>
+							</a>
+                        </div>
+                        <a title="sound intone" class="FontColor name" href="#">丽芝士nabati纳宝帝奶酪威化饼干</a>
+                        <div class="brief">
+							醇正芝士风味   &nbsp;口感酥脆	入口即化
+						</div>
+                        <div class="price">
+							<em class="currency_data PriceColor">¥</em>
+							<span class="price_data PriceColor" data="100.00" keyid="1106">100.00</span>
+						</div>
+                    </div>
+                   		<div class="prod_box ">
+                    	<div class="img v_m">
+                            <a class="pic_box" href="#">
+								<img alt="商品1" src="sourse/商品2.jpg"><span></span>
+							</a>
+                                                        
+                        </div>
+                        <a title="Beats Beats Solo3 Wireless" class="FontColor name" href="#">维他奶 原味豆奶250ml</a>
+                        <div class="brief">
+							非转基因大豆 &nbsp;0胆固醇
+						</div>
+                        <div class="price">
+							<em class="currency_data PriceColor">¥</em>
+							<span class="price_data PriceColor" data="100.00" keyid="1055">100.00</span>
+						</div>
+                    </div>
+                    <div class="prod_box3">
+                    	<div class="img v_m">
+                            <a class="pic_box" href="#">
+								<img alt="Beats " src="sourse/商品3.jpg"><span></span>
+							</a>
+                                                       
+                        </div>
+                        <a title="Beats Beats " class="FontColor name" href="#">
+							雀巢速溶咖啡1+2 原味(100条装)
+							</a>
+                        <div class="brief">
+							即溶即冲即饮品 &nbsp;
+						</div>
+                        <div class="price">
+							<em class="currency_data PriceColor">¥</em>
+							<span class="price_data PriceColor" data="100.00" keyid="1039">100.00</span>
+						</div>
+                    </div>
+						<div class="prod_box ">
+                    	<div class="img v_m">
+                            <a class="pic_box" href="#">
+								<img alt="Beats" src="sourse/商品4.jpg"><span></span>
+							</a>
+                                                       
+                        </div>
+                        <a title="Beats " class="FontColor name" href="#">
+							统一生活面 汤达人日式豚骨拉面
+							</a>
+                        <div class="brief">
+							125g*5袋 方便面 豚骨面 &nbsp;
+						</div>
+                        <div class="price">
+							<em class="currency_data PriceColor">¥</em>
+							<span class="price_data PriceColor" data="100.00" keyid="1039">100.00</span>
+						</div>
+                    </div>
+                        <div class="clear"></div>
+            </div>
+                    <div class="box" >
+                    	<div class="prod_box first">
+                    		<div class="img v_m">
+                            <a class="pic_box" href="#">
+								<img alt="" src="sourse/熟食1.jpg"><span></span>
+							</a>                     
+                        </div>
+                        <a title="商品" class="FontColor name" href="#">
+							 经典巨无霸小玉套餐
+						</a>
+                        <div class="brief">
+							    巨无霸*1+玉米杯*1+可口可乐*1 &nbsp;
+						</div>
+                        <div class="price">
+							<em class="currency_data PriceColor">¥</em>
+							<span class="price_data PriceColor" data="100.00" keyid="1103">30.00</span>
+						</div>
+                    </div>
+                   		<div class="prod_box ">
+                    	<div class="img v_m">
+                            <a class="pic_box" href="#">
+								<img alt="商品" src="sourse/熟食2.jpg"><span></span>
+							</a>        
+                        </div>
+                        <a title="商品" class="FontColor name" href="#">
+							王者小食盒
+						</a>
+                        <div class="brief">
+							    大鸡排*1十麦辣鸡翅*2十麦乐鸡*4
+						</div>
+                        <div class="price">
+							<em class="currency_data PriceColor">¥</em>
+							<span class="price_data PriceColor" data="100.00" keyid="1102">30.00</span>
+						</div>
+                    </div>
+                    <div class="prod_box3 ">
+                    	<div class="img v_m">
+                            <a class="pic_box" href="/wireless-2_p0993.html">
+								<img alt="商品" src="sourse/熟食3.jpg"><span></span>
+							</a>
+                                                       
+                        </div>
+                        <a title="商品3" class="FontColor name" href="#">
+							意式牛肝菌酱牛柳焗饭
+						</a>
+                        <div class="brief">
+							    配：老火汤
+						</div>
+                        <div class="price">
+							<em class="currency_data PriceColor">¥</em>
+							<span class="price_data PriceColor" data="2000.00" keyid="993">30</span>
+						</div>
+                    </div>
+						<div class="prod_box ">
+                    	<div class="img v_m">
+                            <a class="pic_box" href="#">
+								<img alt="Beats" src="sourse/熟食4.jpg"><span></span>
+							</a>
+                                                       
+                        </div>
+                        <a title="Beats" class="FontColor name" href="#">
+							芝芝黑提🍇
+							</a>
+                        <div class="brief">
+							芝芝黑提🍇
+						</div>
+                        <div class="price">
+							<em class="currency_data PriceColor">¥</em>
+							<span class="price_data PriceColor" data="100.00" keyid="1039">100.00</span>
+						</div>
+                    </div>
+                    <div class="clear"></div>
+            </div>
+                    <div class="box">
+                    	<div class="prod_box first">
+                    		<div class="img v_m">
+                            	<a class="pic_box" href="#">
+									<img alt="sound intone" src="sourse/商品5.jpg"><span></span>
+								</a>                        
+                        	</div>
+                        	<a title="sound intone" class="FontColor name" href="#">洽洽瓜子香瓜子308克 </a>
+                        	<div class="brief">
+								精选葵花籽  &nbsp;百煮入味 五香味恰恰
+							</div>
+                       		<div class="price">
+								<em class="currency_data PriceColor">¥</em>
+								<span class="price_data PriceColor" data="100.00" keyid="1105">100.00</span>
+							</div>
+                   		</div>
+                        <div class="prod_box ">
+                    		<div class="img v_m">
+                           		<a class="pic_box" href="#">
+									<img alt="商品" src="sourse/商品6.jpg"><span></span>
+								</a>                         
+                        	</div>
+                        	<a title="商品" class="FontColor name" href="#">三只松鼠 手剥巴旦木235g</a>
+                        	<div class="brief">
+								零食坚果炒货巴达木扁桃仁 &nbsp;
+							</div>
+                        	<div class="price">
+								<em class="currency_data PriceColor">¥</em>
+								<span class="price_data PriceColor" data="100.00" keyid="1072">100.00</span>
+							</div>
+                   		</div>
+                        <div class="prod_box3">
+                    		<div class="img v_m">
+                            	<a class="pic_box" href="#">
+									<img alt="商品" src="sourse/商品7.jpg"><span></span>
+								</a>                            
+                        	</div>
+                        	<a title="商品" class="FontColor name" href="#">
+								三只松鼠 甘栗仁100g
+							</a>
+                        	<div class="brief">
+								休闲零食坚果特产熟制板栗栗仁 &nbsp;
+							</div>
+                        	<div class="price">
+								<em class="currency_data PriceColor">¥</em>
+								<span class="price_data PriceColor" data="100.00" keyid="1067">100.00</span>
+							</div>
+                    	</div>
+						<div class="prod_box ">
+                    	<div class="img v_m">
+                            <a class="pic_box" href="#">
+								<img alt="商品" src="sourse/商品8.jpg"><span></span>
+							</a>
+                                                       
+                        </div>
+                        <a title="商品" class="FontColor name" href="#">
+							KAM YUEN/甘源原味青豆青豌豆285g
+							</a>
+                        <div class="brief">
+							新老包装随机发?咸香酥脆?休闲佳品 &nbsp;
+						</div>
+                        <div class="price">
+							<em class="currency_data PriceColor">¥</em>
+							<span class="price_data PriceColor" data="100.00" keyid="1039">100.00</span>
+						</div>
+                    </div>
+                        <div class="clear"></div>
+           			 </div>
+    </div>
+    <div class="clear"></div>
+</div>	
+</div>
+	<footer>
+		<div class="wide">
+			<div class="mid">
+				<div class="nav">
+					<dl>
+						<dt>会员</dt>
+						<dd><a href="#" title="更改用户信息"><font style="vertical-align: inherit">更改帐户信息</font></a></dd>
+						<dd><a href="#" title="更改用户信息"><font style="vertical-align: inherit">愿望清单</font></a></dd>
+						<dd><a href="#" title="更改用户信息"><font style="vertical-align: inherit">订单跟踪</font></a></dd>
+						<dd><a href="#" title="更改用户信息"><font style="vertical-align: inherit">联系我们</font></a></dd>
+					</dl>
+					<dl>
+						<dt>产品和订单</dt>
+						<dd><a href="#" title="更改用户信息"><font style="vertical-align: inherit">如何下订单</font></a></dd>
+						<dd><a href="#" title="更改用户信息"><font style="vertical-align: inherit">产品咨询</font></a></dd>
+						<dd><a href="#" title="更改用户信息"><font style="vertical-align: inherit">产品审核</font></a></dd>
+					</dl>
+					<dl>
+						<dt>付款</dt>
+						<dd><a href="#" title="更改用户信息"><font style="vertical-align: inherit">退货政策</font></a></dd>
+						<dd><a href="#" title="更改用户信息"><font style="vertical-align: inherit">退货方法</font></a></dd>
+						<dd><a href="#" title="更改用户信息"><font style="vertical-align: inherit">退款</font></a></dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div class="wide">
+        <div class="bot">
+        	<div class="copyright"> &nbsp;&nbsp;&nbsp;&nbsp; <a href="#" target="_blank">FINE</a></div>
+            <div class="clear"></div>
+        </div>
+    </div>
+	</footer>
+</body>
+</html>
